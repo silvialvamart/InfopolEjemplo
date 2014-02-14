@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Permiso Usuario</title>
+    <meta charset = "UTF-8" />
+  </head>
+<body>
+<form action="Procesarpermisousuario.php" method="post" name="formulariopermisousuario">
+<table align="center">    
+	<tr>
+		<td>Ingresar Permiso Usuario</td>				
+	</tr>
+	<tr>
+		<td>Id Usuario:</td>
+		<td><input type="text" name="idusuario"></td>
+	</tr>
+	<tr>
+		<td>Id Permiso:</td>
+		<td><input type="text" name="idpermiso"></td>
+	</tr>
+	<tr>
+		<td>
+          <label>Radio buttons</label>            
+          <input type = "radio"
+                 name = "radSize"
+                 id = "sizeSmall"
+                 value = "1"
+                 checked = "checked" />
+          <label for = "sizeSmall">Si</label>
+		</td>
+		<td>          
+          <input type = "radio"
+                 name = "radSize"
+                 id = "sizeMed"
+                 value = "0" />
+          <label for = "sizeMed">No</label>
+		</td>    
+	</tr>
+
+<tr>
+		<td><a href="http://localhost:806/INFOPOLEJEMPLO/Procesarpermisousuario.php"><img src="\INFOPOLEJEMPLO\agregar.png"></a></td>
+		<td><a href="http://localhost:806/INFOPOLEJEMPLO/Procesarpermisousuario.php"><img src="\INFOPOLEJEMPLO\modificar.jpg"></a></td>
+		<td><a href="http://localhost:806/INFOPOLEJEMPLO/Procesarpermisousuario.php"><img src="\INFOPOLEJEMPLO\eliminar.gif"></a></td>
+	</tr>
+</table>
+</form>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Permiso.html</title>
+    <meta charset = "UTF-8" />
+  </head>
+<body>
+<form action="Procesarpermiso.php" method="post" name="formulariopermiso">
+<table align="center">
+	<tr>
+		<td>Ingresar Permiso</td>				
+	</tr>
+	<tr>
+		<td>Nombre:<td>
+		<td><input type=”text”name="nombre"></td>
+	</tr>
+	<tr>
+	<tr>
+		<td>Pagina:<td>
+		<td><input type=”text”name="pagina"></td>
+	</tr>
+	<tr>
+		<td>
+          <label>Radio buttons</label>            
+          <input type = "radio"
+                 name = "radSize"
+                 id = "sizeSmall"
+                 value = "1"
+                 checked = "checked" />
+          <label for = "sizeSmall">Si</label>
+		</td>
+		<td>          
+          <input type = "radio"
+                 name = "radSize"
+                 id = "sizeMed"
+                 value = "0" />
+          <label for = "sizeMed">No</label>
+		</td>    
+	</tr>
+	<tr>
+		<td><a href="http://localhost:806/INFOPOLEJEMPLO/Procesarpermiso.php"><img src="\INFOPOLEJEMPLO\agregar.png"></a></td>
+		<td><a href="http://localhost:806/INFOPOLEJEMPLO/Procesarpermiso.php"><img src="\INFOPOLEJEMPLO\modificar.jpg"></a></td>
+		<td><a href="http://localhost:806/INFOPOLEJEMPLO/Procesarpermiso.php"><img src="\INFOPOLEJEMPLO\eliminar.gif"></a></td>
+	</tr>
+	</table>
+</form>
+</body>
+</html>

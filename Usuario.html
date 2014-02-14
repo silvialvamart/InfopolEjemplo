@@ -1,0 +1,75 @@
+<?
+include("conexion.php");
+$consulta="select Clave,Titulo from usuario order by Titulo asc";
+$result=mysql_query($consulta); 
+?>
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Usuario</title>
+    <meta charset = "UTF-8" />
+  </head>
+<body>
+<IMG SRC="infopol.jpg" WIDTH=178 HEIGHT=180 BORDER=2 ALT="logo" align=right>
+<form action="Procesarusuario.php" method="post" name="formulariousuario">
+<Table align="center">
+	<tr>
+		<td>Ingresar nuevo usuario</td>				
+	</tr>
+	<tr>
+		<td>Clave:</td>
+		<td><input type="text" name="txt_clave"></td>		
+	</tr>
+	<tr>
+		<td>Contaseña</td>
+		<td><input type="text" name="txt_contraseña"></td>		
+	</tr>
+	<tr>
+		<td>Nombre:</td>
+		<td><input type="text" name="txt_nombre"></td>		
+	</tr>
+	<tr>
+		<td>Titulo:</td>
+		<td><select name="titulo">
+		<option selected="selected" value="">Seleccionar</option>
+		<option  value="Uno">Cadete</option>
+		<option value="Dos">Militar</option>
+		<?
+			while($fila=mysql_fetch_row($result)){
+			echo "<option value='".$fila['0']."'>".$fila['1']."</option>";
+			}
+			?>
+		</select></td>
+	</tr>
+	<tr>
+		<td>Tipo Usuario:</td>
+		<td><input type="text" name="txt_usuario"></td>
+	</tr>	
+    <tr>
+	<td>
+          <label>Radio buttons</label>            
+          <input type = "radio"
+                 name = "radSize"
+                 id = "sizeSmall"
+                 value = "1"
+                 checked = "checked" />
+          <label for = "sizeSmall">Si</label>
+	</td>
+	<td>          
+          <input type = "radio"
+                 name = "radSize"
+                 id = "sizeMed"
+                 value = "0" />
+          <label for = "sizeMed">No</label>
+	</td>    
+	</tr>     
+	<tr>
+	
+		<td><a href="http://localhost:806/INFOPOLEJEMPLO/Procesarusuario.php"><img src="\INFOPOLEJEMPLO\agregar.png"></a></td>
+		<td><a href="http://localhost:806/INFOPOLEJEMPLO/Procesarusuario.php"><img src="\INFOPOLEJEMPLO\modificar.jpg"></a></td>
+		<td><a href="http://localhost:806/INFOPOLEJEMPLO/Procesarusuario.php"><img src="\INFOPOLEJEMPLO\eliminar.gif"></a></td>
+	</tr>
+</Table>
+</form>
+</body>
+</html>
